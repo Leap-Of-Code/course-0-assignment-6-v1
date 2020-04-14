@@ -3,8 +3,11 @@
 using namespace std;
 
 bool Magic(const bool a, const bool b, const bool c) {
-  //Write code here
+  if ((a && !b && c) || (!a && b && !c) || (!a && !b && !c)) {
+    return true;
+  } else {
   return false;
+  }
 }
 
 // You don't have to change this function.

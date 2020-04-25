@@ -3,13 +3,34 @@
 using namespace std;
 
 int GetUserInput() {
-  int num_from_user;
+  int number;
   cout << "Enter a number: ";
-  cin >> num_from_user;
-  return num_from_user;
+  cin >> number;
+  return number;
+}
+
+void CalculateBuzzFizz () {
+
+  int calculate = GetUserInput();
+  bool divides_by_3 = (calculate % 3 == 0);
+  bool divides_by_5 = (calculate % 5 == 0);
+
+  if (divides_by_3 && divides_by_5) {
+    cout << "FizzBuzz";
+  }
+  if (divides_by_3 && !divides_by_5) {
+    cout << "Fizz";
+  }
+  if (!divides_by_3 && divides_by_5) {
+    cout << "Buzz";
+  }
+  if (!divides_by_3 && !divides_by_5) {
+    cout << calculate;
+  }
 }
 
 int main() {
   // Write code here.
+  CalculateBuzzFizz();
   return 0;
 }

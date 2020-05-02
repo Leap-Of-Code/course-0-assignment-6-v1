@@ -3,30 +3,32 @@
 using namespace std;
 
 bool Magic(const bool a, const bool b, const bool c) {
-  if (a || b || c){
+  if (a && b && c){
     return false;
   }
-  if (a || b || !c){
+  if (a && b && !c){
     return false;
   }
-  if (a || !b || c) { 
+  if (a && !b && c) { 
     return true;
   }
-  if (a || !b || !c){
+  if (a && !b && !c){
     return false;
   }
-  if (!a || b || c) {
+  if (!a && b && c) {
     return false;
   }
-  if (!a || b || !c) { 
+  if (!a && b && !c) { 
     return true;
   }
-  if (!a || !b || c) {
+  if (!a && !b && c) {
     return false;
   }
-  if (!a || !b || !c) {
+  if (!a && !b && !c) {
     return true;
   }
+  return false;
+}
 
 int TestMagic(const bool a, const bool b, const bool c, const bool expected_answer) {
   bool answer = Magic(a, b, c);

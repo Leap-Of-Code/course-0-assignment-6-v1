@@ -3,11 +3,33 @@
 using namespace std;
 
 bool Magic(const bool a, const bool b, const bool c) {
-  //Write code here
+  if (a && b && c){
+    return false;
+  }
+  if (a && b && !c){
+    return false;
+  }
+  if (a && !b && c) { 
+    return true;
+  }
+  if (a && !b && !c){
+    return false;
+  }
+  if (!a && b && c) {
+    return false;
+  }
+  if (!a && b && !c) { 
+    return true;
+  }
+  if (!a && !b && c) {
+    return false;
+  }
+  if (!a && !b && !c) {
+    return true;
+  }
   return false;
 }
 
-// You don't have to change this function.
 int TestMagic(const bool a, const bool b, const bool c, const bool expected_answer) {
   bool answer = Magic(a, b, c);
   if (answer != expected_answer) {
@@ -31,7 +53,8 @@ int main() {
 
   if (num_incorrect > 0) {
     cout << "You got " << num_incorrect << " incorrect!" << endl;
-  } else {
+  } 
+  else {
     cout << "You got everything right!" << endl;
   }
 

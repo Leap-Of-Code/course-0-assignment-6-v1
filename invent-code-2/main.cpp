@@ -9,7 +9,25 @@ int GetUserInput() {
   return num_from_user;
 }
 
+string Calculate(int input){ 
+  if ((input%3 == 0) && (input%5 != 0)){
+    return "Fizz";
+  }
+  if ((input%3 != 0) && (input%5 == 0)){
+    return "Buzz";
+  }
+  if ((input%3 == 0) && (input%5 == 0)){
+    return "FizzBuzz";
+  }
+  else {
+    cout << input << endl;
+  }
+  return " ";
+}
+
 int main() {
-  // Write code here.
+  int userinput = GetUserInput();
+  string answer = Calculate(userinput);
+  cout << answer;
   return 0;
 }

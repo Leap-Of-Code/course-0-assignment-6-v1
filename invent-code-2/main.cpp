@@ -22,7 +22,7 @@ string Calculate(int input){
   else {
     cout << input << endl;
   }
-  return 0;
+  return " ";
 }
 
 int main() {

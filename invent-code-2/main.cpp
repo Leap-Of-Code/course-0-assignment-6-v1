@@ -3,13 +3,27 @@
 using namespace std;
 
 int GetUserInput() {
-  int num_from_user;
   cout << "Enter a number: ";
-  cin >> num_from_user;
-  return num_from_user;
+  int a; 
+  cin >> a;
+  return a;
 }
 
 int main() {
-  // Write code here.
-  return 0;
-}
+  int A = GetUserInput(); 
+  if (A % 3 == 0) {
+    cout << "Fizz";
+  }
+  if (A % 5 == 0)
+  cout << "Buzz"; 
+  }
+  if (A % 3 > 0) {
+    if (A % 5 > 0) {
+      cout << A;
+    }
+  return 0; 
+  }
+
+
+  
+

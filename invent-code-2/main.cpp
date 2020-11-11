@@ -10,6 +10,18 @@ int GetUserInput() {
 }
 
 int main() {
-  // Write code here.
+  int multiple = GetUserInput();
+  if (((multiple / 3) == (multiple / 3.0)) && ((multiple / 5) == (multiple / 5.0))) {
+      cout << "FizzBuzz" << endl;
+    }
+  else if (((multiple / 3) == (multiple / 3.0))) {
+    cout << "Fizz" << endl;
+  }
+  else if (((multiple / 5) == (multiple / 5.0))) {
+    cout << "Buzz" << endl;
+  }
+  else {
+    cout << multiple << endl;
+  }
   return 0;
 }

@@ -3,7 +3,6 @@
 using namespace std;
 
 bool Magic(const bool a, const bool b, const bool c) {
-  //Write code here
   return false;
 }
 
@@ -22,12 +21,12 @@ int main() {
   int num_incorrect = 0;
   num_incorrect = num_incorrect + TestMagic(true, true, true, false);
   num_incorrect = num_incorrect + TestMagic(true, true, false, false);
-  num_incorrect = num_incorrect + TestMagic(true, false, true, true);
+  num_incorrect = num_incorrect + TestMagic(true, false, true, false);
   num_incorrect = num_incorrect + TestMagic(true, true, false, false);
   num_incorrect = num_incorrect + TestMagic(false, true, true, false);
-  num_incorrect = num_incorrect + TestMagic(false, true, false, true);
+  num_incorrect = num_incorrect + TestMagic(false, true, false, false);
   num_incorrect = num_incorrect + TestMagic(false, false, true, false);
-  num_incorrect = num_incorrect + TestMagic(false, true, false, true);
+  num_incorrect = num_incorrect + TestMagic(false, true, false, false);
 
   if (num_incorrect > 0) {
     cout << "You got " << num_incorrect << " incorrect!" << endl;
